@@ -67,8 +67,8 @@
 </head>
 <body class="status-page @yield('bodyClass')">
     @yield('outer-content')
-
-    @include('partials.banner')
+    @include('partials.header')
+    {{--@include('partials.banner')--}}
 
     <div class="container">
         @yield('content')

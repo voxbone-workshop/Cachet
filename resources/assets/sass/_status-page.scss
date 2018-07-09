@@ -1,7 +1,7 @@
 body.status-page {
     padding-top: 40px;
     font-family: $base-font-family;
-    background-color: #F0F3F4;
+    background-color: #FFFFFF;
     color: #333333;
     font-size: 1.4em;
     font-weight: $base-font-weight;
@@ -47,20 +47,28 @@ body.status-page {
         cursor: help;
     }
 
+    .light-text {
+        color: #95a1ad !important;
+    }
+
     .text-success, .text-component-1 {
         color: $cachet_green;
+        letter-spacing: 1.1px;
     }
 
     .text-info, .text-component-2 {
         color: $cachet_blue;
+        letter-spacing: 1.1px;
     }
 
     .text-alert, .text-component-3 {
         color: $cachet_yellow;
+        letter-spacing: 1.1px;
     }
 
     .text-danger, .text-component-4 {
         color: $cachet_red;
+        letter-spacing: 1.1px;
     }
 
     .container {
@@ -75,6 +83,93 @@ body.status-page {
         margin-bottom: 30px;
     }
 
+    .navigation {
+        background: #FFF;
+        border-bottom: solid .01em #eaeef1;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: block;
+    }
+
+    .navigation_logo {
+        float: left;
+        height: 100%;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .banner-image {
+        position: absolute;
+        margin: 2rem 0 0 2rem;
+        line-height: 3.6em;
+        vertical-align: middle;
+        width: 142.2px;
+        height: 38.7px;
+    }
+
+    .uptime-logo-text-part {
+        width: 97px;
+        height: 22px;
+        margin: 7rem 0 0 6.4rem;
+        line-height: 9.5em;
+        vertical-align: middle;
+        font-size: 10.8px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 10.8px;
+        color: #7a18ff;
+        text-decoration: none;
+    }
+
+    .navbar-btn-default {
+        font-size: 16px;
+        margin-left: 25px;
+        margin-right: 35px;
+    }
+
+    .btn-log-out {
+        padding: 40px;
+    }
+
+    .navigation_extras {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: calc(100% + 1px);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navigation_subscribe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .subscribe-btn-container {
+        position: relative;
+        text-align: center;
+    }
+
+    .diagonal-green {
+        height: 80px;
+        width: 170px;
+        object-fit: contain;
+    }
+
+    .log-out-btn {
+        width: 24.8px;
+        height: 25.6px;
+    }
+
     .about-app {
         margin-bottom: 40px;
         p {
@@ -83,8 +178,16 @@ body.status-page {
     }
 
     .alert {
-        font-size: 1.2em;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+    }
+
+    .section-status {
+        top: 30px;
+        position: relative;
+        margin-top: 4em;
+        margin-bottom: 5em;
     }
 
     .timeline {
@@ -257,9 +360,11 @@ body.status-page {
         .list-group-item {
             border-radius: 0;
             background-color: #ffffff;
-            border: 1px solid $cachet_gray_light;
+            //border: 1px solid $cachet_gray_light;
             font-size: 1.1em;
-            padding: 15px 15px;
+            //padding: 15px 15px;
+            padding: 1.8rem;
+            border: none;
 
             a {
                 font-weight: 400;
@@ -278,10 +383,10 @@ body.status-page {
 
             &.group-name {
                 background-color: $cachet_gray_light;
-                padding: {
-                    top: 0.6em;
-                    bottom: 0.6em;
-                }
+                //padding: {
+                //    top: 0.6em;
+                //    bottom: 0.6em;
+                //}
                 cursor: pointer;
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
@@ -294,6 +399,22 @@ body.status-page {
             &.break {
                 padding: 1px;
                 background-color: $cachet-base-medium;
+            }
+
+            .larger {
+                font-size: larger;
+            }
+
+            .text-inline {
+                display: inline-flex;
+            }
+
+            .status-text {
+                margin-left: 2rem;
+                font-size: 13px;
+                font-weight: bold;
+                margin-top: 2px;
+                letter-spacing: 1.1px;
             }
         }
 
@@ -318,6 +439,10 @@ body.status-page {
 
             a {
                 color: $cachet-base-dark !important;
+            }
+
+            .plus-minus-toggle {
+                margin-left: 2rem;
             }
 
         }

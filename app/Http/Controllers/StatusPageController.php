@@ -178,7 +178,7 @@ class StatusPageController extends AbstractApiController
                 $color = Config::get('setting.style_blues', '#3498db');
                 break;
             case 'greens':
-                $color = Config::get('setting.style_greens', '#7ED321');
+                $color = Config::get('setting.style_greens', '#46F076');
                 break;
             case 'yellows':
                 $color = Config::get('setting.style_yellows', '#F7CA18');

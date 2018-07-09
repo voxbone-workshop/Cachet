@@ -33,7 +33,7 @@ class ThemeComposer
         $view->withThemeTextColor(Config::get('setting.style_text_color', '#333333'));
         $view->withThemeReds(Config::get('setting.style_reds', '#ff6f6f'));
         $view->withThemeBlues(Config::get('setting.style_blues', '#3498db'));
-        $view->withThemeGreens(Config::get('setting.style_greens', '#7ED321'));
+        $view->withThemeGreens(Config::get('setting.style_greens', '#46F076'));
         $view->withThemeYellows(Config::get('setting.style_yellows', '#F7CA18'));
         $view->withThemeOranges(Config::get('setting.style_oranges', '#FF8800'));
         $view->withThemeMetrics(Config::get('setting.style_metrics', '#0dccc0'));

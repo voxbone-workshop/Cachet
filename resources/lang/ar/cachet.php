@@ -14,10 +14,10 @@ return [
     'components' => [
         'last_updated' => 'Last updated :timestamp',
         'status'       => [
-            1 => 'Operational',
-            2 => 'Performance Issues',
-            3 => 'Partial Outage',
-            4 => 'Major Outage',
+            1 => 'OPERATIONAL',
+            2 => 'PERFORMANCE ISSUES',
+            3 => 'PARTIAL OUTAGE',
+            4 => 'MAJOR OUTAGE',
         ],
         'group' => [
             'other' => 'Other Components',

@@ -3,11 +3,11 @@
 <ul class="list-group components">
     @if($componentGroup->enabled_components->count() > 0)
     <li class="list-group-item group-name">
-        <i class="{{ $componentGroup->collapse_class }} group-toggle"></i>
         <strong>{{ $componentGroup->name }}</strong>
-
-        <div class="pull-right">
+        <div class="pull-right larger text-inline">
             <i class="ion ion-ios-circle-filled text-component-{{ $componentGroup->lowest_status }} {{ $componentGroup->lowest_status_color }}" data-toggle="tooltip" title="{{ $componentGroup->lowest_human_status }}"></i>
+            <div class="status-text">{{ $componentGroup->lowest_human_status }}</div>
+            <i class="{{ $componentGroup->collapse_class }} group-toggle plus-minus-toggle"></i>
         </div>
     </li>
 

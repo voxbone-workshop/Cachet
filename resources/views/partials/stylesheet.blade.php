@@ -1,6 +1,6 @@
 <style type="text/css">
 body.status-page {
-    background-color: {{ $theme_background_color }};
+    {{--background-color: {{ $theme_background_color }};--}}
     color: {{ $theme_text_color }};
     @if($app_banner)
     padding-top: 0;

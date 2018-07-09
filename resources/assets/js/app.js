@@ -272,7 +272,7 @@ $(function() {
     $('.group-name').on('click', function () {
         var $this = $(this);
 
-        $this.find('.group-toggle').toggleClass('ion-ios-minus-outline').toggleClass('ion-ios-plus-outline');
+        $this.find('.group-toggle').toggleClass('ion-minus').toggleClass('ion-plus');
 
         $this.next('.group-items').toggleClass('hide');
     });

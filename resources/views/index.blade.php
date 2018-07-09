@@ -6,7 +6,7 @@
 </div>
 
 <div class="section-status">
-    <div class="alert alert-{{ $system_status }}">{{ $system_message }}</div>
+    <div class="alert text-center alert-{{ $system_status }}">{{ $system_message }}</div>
 </div>
 
 @include('partials.about-app')
