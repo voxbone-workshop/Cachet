@@ -17,7 +17,7 @@ return [
             1 => 'OPERATIONAL',
             2 => 'PERFORMANCE ISSUES',
             3 => 'PARTIAL OUTAGE',
-            4 => 'MAJOR OUTAGE',
+            4 => 'FULL OUTAGE',
         ],
         'group' => [
             'other' => 'Other Components',

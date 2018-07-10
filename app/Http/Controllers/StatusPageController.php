@@ -183,6 +183,9 @@ class StatusPageController extends AbstractApiController
             case 'yellows':
                 $color = Config::get('setting.style_yellows', '#F7CA18');
                 break;
+            case 'oranges':
+                $color = Config::get('setting.style_oranges', '#f5a623');
+                break;
         }
 
         $badge = Badger::generate(

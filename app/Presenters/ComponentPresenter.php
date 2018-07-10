@@ -31,7 +31,7 @@ class ComponentPresenter extends BasePresenter implements Arrayable
         switch ($this->wrappedObject->status) {
             case 1: return 'greens';
             case 2: return 'blues';
-            case 3: return 'yellows';
+            case 3: return 'oranges';
             case 4: return 'reds';
         }
     }

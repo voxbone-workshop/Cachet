@@ -165,9 +165,11 @@ body.status-page {
         object-fit: contain;
     }
 
-    .log-out-btn {
-        width: 24.8px;
-        height: 25.6px;
+    .u-content--upper {
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 3.2;
+        letter-spacing: 0.8px;
     }
 
     .about-app {
@@ -449,17 +451,23 @@ body.status-page {
     }
 
     footer {
-        position: absolute;
+        //position: absolute;
         width: 100%;
         bottom: 0;
-        height: 60px;
+        //height: 60px;
         padding: 30px 0 60px 0;
         border-top: 1px solid $cachet_gray_light;
         color: $cachet-gray-darker;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 30px;
         text-align: center;
-        text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        //text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        font-weight: normal;
+        box-sizing: initial;
+        position: relative;
+        background-color: #2f3550;
+        list-style-type: none !important;
+        height: 189px;
 
         .btn {
             text-shadow: none;
@@ -490,6 +498,51 @@ body.status-page {
 
         .list-inline > li {
             padding-right: 0;
+        }
+
+        .footer_rectangle {
+            margin-left: 30px;
+            top: 0;
+            position: absolute;
+            width: 94%;
+        }
+
+        .footer_first_line {
+            margin-bottom: 42px;
+        }
+
+        .footer_legals {
+            display: inline-flex;
+            float: right;
+            list-style-type: none !important;
+            opacity: 0.4;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2.14;
+            letter-spacing: -0.4px;
+            color: #ffffff;
+        }
+
+        .footer_copyright {
+            display: inline-flex;
+            opacity: 0.4;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2.14;
+            letter-spacing: -0.4px;
+            color: #ffffff;
+        }
+
+        .footer_to_top_rectangle {
+            width: 63px;
+            height: 35px;
+            background-color: #595d73;
+            padding: 9px;
+            text-decoration: none;
         }
 
         @media (min-width: 768px) {

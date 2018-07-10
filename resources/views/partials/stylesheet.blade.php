@@ -40,9 +40,9 @@ p, strong { color: {{ $theme_text_color }} !important; }
     color: {{ color_contrast($theme_greens) }};
 }
 .alert.alert-info {
-    background-color: {{ $theme_blues }};
-    border-color: {{ color_darken($theme_blues, -0.1) }};
-    color: {{ color_contrast($theme_blues) }};
+    background-color: {{ $theme_oranges }};
+    border-color: {{ color_darken($theme_oranges, -0.1) }};
+    color: {{ color_contrast($theme_oranges) }};
 }
 .alert.alert-danger {
     background-color: {{ $theme_reds }};
@@ -119,6 +119,6 @@ p, strong { color: {{ $theme_text_color }} !important; }
     border-right-color: {{ $theme_background_fills }} !important;
 }
 .footer a {
-    color: {{ $theme_text_color }};
+    color: #ffffff;
 }
 </style>

@@ -6,6 +6,8 @@
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/cachet/localized.svg)](http://translate.cachethq.io/project/cachet)
 [![Packagist](https://img.shields.io/packagist/v/cachethq/cachet.svg?style=flat-square)](https://packagist.org/packages/cachethq/cachet)
 
+UPDATE: This is Cachet v2.3.15 with Voxbone custom UI 
+
 ![Screenshot](https://cachethq.io/img/main-interface.jpg)
 
 Cachet is a beautiful and powerful open source status page system.
