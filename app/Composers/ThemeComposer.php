@@ -36,7 +36,7 @@ class ThemeComposer
         $view->withThemeGreens(Config::get('setting.style_greens', '#46F076'));
         $view->withThemeYellows(Config::get('setting.style_yellows', '#F7CA18'));
         $view->withThemeOranges(Config::get('setting.style_oranges', '#f5a623'));
-        $view->withThemeMetrics(Config::get('setting.style_metrics', '#0dccc0'));
+        $view->withThemeMetrics(Config::get('setting.style_metrics', '#40e2f2'));
         $view->withThemeLinks(Config::get('setting.style_links', '#7ED321'));
     }
 }

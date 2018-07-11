@@ -73,6 +73,12 @@ body.status-page {
 
     .container {
         max-width: 960px;
+        margin-bottom: 285px
+    }
+
+    .bottomed-abs {
+        bottom: 0;
+        position: absolute;
     }
 
     .page-header {
@@ -154,6 +160,10 @@ body.status-page {
         transform: translate(-50%, -50%);
     }
 
+    .panel_heading_subscribe {
+        margin-top: 50px;
+    }
+
     .subscribe-btn-container {
         position: relative;
         text-align: center;
@@ -190,6 +200,81 @@ body.status-page {
         position: relative;
         margin-top: 4em;
         margin-bottom: 5em;
+    }
+
+    .notification-subs-container {
+        width: 590px;
+        height: 193px;
+        background-color: #ffffff;
+        border: solid 1px #e5ecf1;
+        margin: auto;
+        padding: 10px;
+        margin-bottom: 90px;
+    }
+
+    .notification-name {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.33;
+        color: #95a1ad;
+    }
+
+    .notification-url {
+        font-size: 20px;
+        line-height: 1.2;
+        color: #2d374d;
+    }
+
+    .copy_btn {
+        width: 80px;
+        height: 35px;
+        object-fit: contain;
+        background-color: #47f077;
+        border: none;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    .some-left-margin {
+        margin-left: 10px;
+    }
+
+    .push-notifications-container {
+        margin: auto;
+        padding: 10px;
+        margin-bottom: 90px;
+    }
+
+    .ucontact-subscribe-container {
+        width: 590px;
+        height: 65px;
+        background-color: #f6f7f9;
+        border: solid 1px #e5ecf1;
+    }
+
+    .subscribe-form-label{
+        float: left;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+
+    .subscribe-form-control {
+        width: 429px;
+        height: 50px;
+        background-color: #ffffff;
+        border: solid 1px #e8edf0;
+        margin-top: 1%;
+    }
+
+    .btn-save-purple {
+        width: 150px;
+        height: 50px;
+        background-color: #7a18ff;
+        color: #ffffff;
     }
 
     .timeline {

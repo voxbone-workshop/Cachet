@@ -6,7 +6,8 @@
     @endif
 
     @if($component->description)
-    <i class="ion ion-ios-help-outline help-icon" data-toggle="tooltip" data-title="{{ $component->description }}" data-container="body"></i>
+    {{--<i class="ion ion-ios-help-outline help-icon" data-toggle="tooltip" data-title="{{ $component->description }}" data-container="body"></i>--}}
+    <img class="some-left-margin" data-toggle="tooltip" data-title="{{ $component->description }}" data-container="body" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
     @endif
 
     <div class="pull-right">

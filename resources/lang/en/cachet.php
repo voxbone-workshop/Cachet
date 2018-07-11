@@ -65,7 +65,7 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe' => 'Subscribe to get the most recent updates',
+        'subscribe' => 'Subscribe to notifications',
         'button'    => 'Subscribe',
         'manage'    => [
             'no_subscriptions' => 'You\'re currently subscribed to all updates.',
