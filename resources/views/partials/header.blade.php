@@ -7,6 +7,9 @@
             <span class="uptime-logo-text-part">UPTIME</span>
         @endif
     </a>
+    <div class="sidebar-toggler visible-xs">
+        <i class="ion ion-navicon" style="font-size: 30px;float: right;padding: 6%;"></i>
+    </div>
     <div class="navigation_extras">
         <a href="https://support.voxbone.com/hc/en-us/requests/new" class="navbar-btn-default">
             Contact Support

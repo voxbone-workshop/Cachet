@@ -15543,6 +15543,9 @@ body.status-page .timeline .moment .panel .panel-body p:not(:last-child), body.s
   body.status-page .timeline .moment .content {
     width: 100%;
   }
+  body.status-page .navigation_extras {
+    display: none !important;
+  }
 }
 
 body.status-page .list-group {

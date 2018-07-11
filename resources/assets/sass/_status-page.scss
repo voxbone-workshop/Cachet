@@ -437,6 +437,10 @@ body.status-page {
         .timeline .moment .content {
             width: 100%;
         }
+
+        .navigation_extras {
+            display: none !important;
+        }
     }
 
     .list-group {
