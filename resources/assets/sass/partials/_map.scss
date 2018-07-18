@@ -1,0 +1,21 @@
+#mixed_display_modes {
+  position: relative;
+  #marker_map {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    top: 0;
+    text {
+      pointer-events: visible;
+    }
+    circle {
+      pointer-events: visible;
+    }
+    path {
+      display: none;
+    }
+    rect {
+      fill: transparent;
+    }
+  }
+}

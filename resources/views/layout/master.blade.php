@@ -68,7 +68,6 @@
 <body class="status-page @yield('bodyClass')">
     @yield('outer-content')
     @include('partials.header')
-    {!! $app_header !!}
 
     <div class="container">
         @yield('content')

@@ -1,6 +1,15 @@
 @extends('layout.master')
 
 @section('content')
+
+<div class="text-center">
+    <h3>Voxbone Network Status</h3>
+</div>
+
+<div class="map">
+    @include('partials.map')
+</div>
+
 <div class="section-messages">
     @include('dashboard.partials.errors')
 </div>
