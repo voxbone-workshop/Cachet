@@ -20,7 +20,7 @@
                     <table>
                         <tr>
                             <td class="notification-name">RSS</td>
-                            <td class="notification-url"><input type="text" value="{{ route('feed.rss') }}" id="rss"></td>
+                            <td class="notification-url"><input type="text" value="{{ route('feed.rss') }}" id="rss" readonly></td>
                             <td>
                                 <button class="copy_btn" onclick="copyToClipboard('rss')">
                                     <span>COPY</span>
@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <td class="notification-name">ATOM</td>
-                            <td class="notification-url"><input type="text" value="{{ route('feed.atom') }}" id="atom"></td>
+                            <td class="notification-url"><input type="text" value="{{ route('feed.atom') }}" id="atom" readonly></td>
                             <td>
                                 <button class="copy_btn" onclick="copyToClipboard('atom')">
                                     <span>COPY</span>
@@ -39,7 +39,7 @@
                         </tr>
                         <tr>
                             <td class="notification-name">SLACK</td>
-                            <td class="notification-url"><input type="text" value="/subscribe vxbn.io/stats" id="slack"></td>
+                            <td class="notification-url"><input type="text" value="/feed subscribe https://uptime.voxboneworkshop.com/rss" id="slack" readonly></td>
                             <td>
                                 <button class="copy_btn" onclick="copyToClipboard('slack')">
                                     <span>COPY</span>
