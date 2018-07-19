@@ -1,4 +1,6 @@
-<h4>{{ formatted_date($date) }}</h4>
+<div class="underline">
+    <h4>{{ formatted_date($date) }}</h4>
+</div>
 <div class="timeline">
     <div class="content-wrapper">
         @forelse($incidents as $incidentID => $incident)
@@ -15,10 +17,8 @@
             </div>
         </div>
         @empty
-        <div class="panel panel-message incident">
-            <div class="panel-body">
-                <p class="light-text">{{ trans('cachet.incidents.none') }}</p>
-            </div>
+        <div class="panel panel-message">
+            <h4 class="light-text">{{ trans('cachet.incidents.none') }}</h4>
         </div>
         @endforelse
     </div>

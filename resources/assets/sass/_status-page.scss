@@ -16,8 +16,9 @@ body.status-page {
         margin-bottom: 10px;
     }
 
-    h1, h2, h3, h4, h5 {
-        margin-bottom: 20px;
+    h1 {
+        // h2, h3, h4, h5
+        margin-bottom: 40px;
     }
 
     img {
@@ -277,9 +278,13 @@ body.status-page {
         color: #ffffff;
     }
 
+    .underline {
+        border-bottom: 1px solid #95a1ad !important;
+    }
+
     .timeline {
         .content-wrapper {
-            margin-top: 40px;
+            margin-top: 15px;
             margin-bottom: 40px;
         }
         h3 {
@@ -416,6 +421,10 @@ body.status-page {
                 }
 
                 .panel-heading {
+                    h4 {
+                        color: #7a18ff !important;
+                    }
+
                     strong {
                         color: #7a18ff !important;
                         font-size: 1.1em;
@@ -423,12 +432,15 @@ body.status-page {
                 }
 
                 .panel-body {
-                    border-top: 1px solid #eee;
                     p {
                         &:not(:last-child) {
                             margin-bottom: 10px;
                         }
                         font-size: 1.1em;
+                        line-height: 2;
+                    }
+
+                    .markdown-body {
                     }
                 }
             }
