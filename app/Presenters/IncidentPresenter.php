@@ -161,13 +161,13 @@ class IncidentPresenter extends BasePresenter implements Arrayable
             case 0: // Scheduled
                 return 'icon ion-android-calendar';
             case 1: // Investigating
-                return 'icon ion-flag oranges';
+                return 'icon ion-flag';
             case 2: // Identified
-                return 'icon ion-alert yellows';
+                return 'icon ion-alert';
             case 3: // Watching
-                return 'icon ion-eye blues';
+                return 'icon ion-eye';
             case 4: // Fixed
-                return 'icon ion-checkmark greens';
+                return 'icon ion-checkmark';
             default: // Something actually broke, this shouldn't happen.
                 return '';
         }

@@ -7,21 +7,21 @@
         </div>
         @endif
 
-        <div>
+        <div class="labels">
             @if($with_link)
-            <a href="{{ route('incident', ['id' => $incident->id]) }}" class="links">
-                <span class="label label-default">
-                    <abbr class="timeago" data-toggle="tooltip" data-placement="right" title="{{ $incident->timestamp_formatted }}" data-timeago="{{ $incident->timestamp_iso }}"></abbr>
-                </span>
-            </a>
+                <a href="{{ route('incident', ['id' => $incident->id]) }}" class="links">
+                    <span class="label label-default label-timeago status-{{ $incident->status }}">
+                        {{ strtoupper($incident->human_status) }} at {{ $incident->timestamp_formatted }}
+                    </span>
+                </a>
             @else
-                <span class="label label-default">
-                    <abbr class="timeago" data-toggle="tooltip" data-placement="right" title="{{ $incident->timestamp_formatted }}" data-timeago="{{ $incident->timestamp_iso }}"></abbr>
+                <span class="label label-default label-timeago status-{{ $incident->status }}">
+                    {{ strtoupper($incident->human_status) }} at {{ $incident->timestamp_formatted }}
                 </span>
             @endif
 
             @if($incident->component)
-                <span class="label label-default">{{ $incident->component->name }}</span>
+                <span class="label label-default label-component">{{ $incident->component->name }}</span>
             @endif
         </div>
         <h4><strong>{{ $incident->name }}</strong></h4>{{ $incident->isScheduled ? trans("cachet.incidents.scheduled_at", ["timestamp" => $incident->scheduled_at_diff]) : null }}

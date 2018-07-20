@@ -15494,23 +15494,23 @@ body.status-page .timeline .moment .status-icon .icon.ion-alert {
 }
 
 body.status-page .timeline .moment .status-icon.status-0 {
-  color: #b23f73;
+  background-color: #b23f73;
 }
 
 body.status-page .timeline .moment .status-icon.status-1 {
-  color: #F5A623;
+  background-color: #F5A623;
 }
 
 body.status-page .timeline .moment .status-icon.status-2 {
-  color: #F7CA18;
+  background-color: #F7CA18;
 }
 
 body.status-page .timeline .moment .status-icon.status-3 {
-  color: #3498db;
+  background-color: #3498db;
 }
 
 body.status-page .timeline .moment .status-icon.status-4 {
-  color: #46f076;
+  background-color: #46f076;
 }
 
 body.status-page .timeline .moment.last:before {
@@ -15523,6 +15523,7 @@ body.status-page .timeline .moment .panel, body.status-page .timeline .moment .l
 }
 
 body.status-page .timeline .moment .panel.panel-message, body.status-page .timeline .moment .panel-message.list-group.components {
+  padding: 5px;
   border: 1px solid #e8e8e8;
 }
 
@@ -15561,6 +15562,46 @@ body.status-page .timeline .moment .panel .panel-heading h4, body.status-page .t
 body.status-page .timeline .moment .panel .panel-heading strong, body.status-page .timeline .moment .list-group.components .panel-heading strong {
   color: #7a18ff !important;
   font-size: 1.1em;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels, body.status-page .timeline .moment .list-group.components .panel-heading .labels {
+  padding-bottom: 1em;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-component, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-component {
+  margin: 1em;
+  padding: 1em 3em;
+  color: #2d374d;
+  background-color: #d0d6db;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-timeago, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-timeago {
+  color: #2d374d;
+  padding: 1em 3em;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-timeago.status-0, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-timeago.status-0 {
+  background-color: #b23f73;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-timeago.status-1, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-timeago.status-1 {
+  background-color: #F5A623;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-timeago.status-2, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-timeago.status-2 {
+  background-color: #F7CA18;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-timeago.status-3, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-timeago.status-3 {
+  background-color: #3498db;
+}
+
+body.status-page .timeline .moment .panel .panel-heading .labels .label-timeago.status-4, body.status-page .timeline .moment .list-group.components .panel-heading .labels .label-timeago.status-4 {
+  background-color: #46f076;
+}
+
+body.status-page .timeline .moment .panel .panel-body, body.status-page .timeline .moment .list-group.components .panel-body {
+  padding: 0 15px;
 }
 
 body.status-page .timeline .moment .panel .panel-body p, body.status-page .timeline .moment .list-group.components .panel-body p {

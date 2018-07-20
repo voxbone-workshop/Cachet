@@ -367,19 +367,19 @@ body.status-page {
                     }
                 }
                 &.status-0 {
-                    color: $cachet_pink;
+                    background-color: $cachet_pink;
                 }
                 &.status-1 {
-                    color: $cachet_orange;
+                    background-color: $cachet_orange;
                 }
                 &.status-2 {
-                    color: $cachet_yellow;
+                    background-color: $cachet_yellow;
                 }
                 &.status-3 {
-                    color: $cachet_blue;
+                    background-color: $cachet_blue;
                 }
                 &.status-4 {
-                    color: $cachet_green;
+                    background-color: $cachet_green;
                 }
             }
             &.last:before {
@@ -390,6 +390,7 @@ body.status-page {
                 border-radius: 2px;
 
                 &.panel-message {
+                    padding: 5px;
                     border: 1px solid #e8e8e8;
                     .date {
                         color: darken(#c7c7c7, 20%);
@@ -429,9 +430,43 @@ body.status-page {
                         color: #7a18ff !important;
                         font-size: 1.1em;
                     }
+
+                    .labels {
+                        padding-bottom: 1em;
+
+                        .label-component {
+                            margin: 1em;
+                            padding: 1em 3em;
+                            color: #2d374d;
+                            background-color: #d0d6db;
+                        }
+
+                        .label-timeago {
+                            color: #2d374d;
+                            padding: 1em 3em;
+
+                            &.status-0 {
+                                background-color: $cachet_pink;
+                            }
+                            &.status-1 {
+                                background-color: $cachet_orange;
+                            }
+                            &.status-2 {
+                                background-color: $cachet_yellow;
+                            }
+                            &.status-3 {
+                                background-color: $cachet_blue;
+                            }
+                            &.status-4 {
+                                background-color: $cachet_green;
+                            }
+                        }
+                    }
                 }
 
                 .panel-body {
+                    padding: 0 15px;
+
                     p {
                         &:not(:last-child) {
                             margin-bottom: 10px;
