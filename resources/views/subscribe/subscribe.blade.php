@@ -39,7 +39,7 @@
                         </tr>
                         <tr>
                             <td class="notification-name">SLACK</td>
-                            <td class="notification-url"><input type="text" value="/feed subscribe https://uptime.voxboneworkshop.com/rss" id="slack" readonly></td>
+                            <td class="notification-url"><input type="text" value="/feed subscribe {{ route('feed.rss') }}" id="slack" readonly></td>
                             <td>
                                 <button class="copy_btn" onclick="copyToClipboard('slack')">
                                     <span>COPY</span>
