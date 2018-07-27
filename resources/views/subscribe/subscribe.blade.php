@@ -25,7 +25,7 @@
                                 <button class="copy_btn" onclick="copyToClipboard('rss')">
                                     <span>COPY</span>
                                 </button>
-                                <img class="some-left-margin" data-toggle="tooltip" data-title="RSS feed" data-container="body" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
+                                <img class="some-left-margin" data-toggle="tooltip" data-title="RSS feed" data-container="body" data-placement="right" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
                         </tr>
                         <tr>
                             <td class="notification-name">ATOM</td>
@@ -34,7 +34,7 @@
                                 <button class="copy_btn" onclick="copyToClipboard('atom')">
                                     <span>COPY</span>
                                 </button>
-                                <img class="some-left-margin" data-toggle="tooltip" data-title="ATOM" data-container="body" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
+                                <img class="some-left-margin" data-toggle="tooltip" data-title="ATOM feed" data-container="body" data-placement="right" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
                             </td>
                         </tr>
                         <tr>
@@ -44,7 +44,7 @@
                                 <button class="copy_btn" onclick="copyToClipboard('slack')">
                                     <span>COPY</span>
                                 </button>
-                                <img class="some-left-margin" data-toggle="tooltip" data-title="Copy & paste this command in your slack channel where you want to see notifications" data-container="body" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
+                                <img class="some-left-margin" data-toggle="tooltip" data-title="Copy & paste this command in your slack channel where you want to see notifications" data-placement="right" data-container="body" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
                             </td>
                         </tr>
                     </table>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         {{--<button type="submit" class="btn btn-success">{{ trans('cachet.subscriber.button') }}</button>--}}
-                        <button type="submit" class="btn btn-save-purple"><span style="font-size: 12px;font-weight: bold; color: #ffffff">Save</span></button>
+                        <button type="submit" class="btn btn-save-purple"><span style="font-size: 12px;font-weight: bold; color: #ffffff">SAVE</span></button>
                     </form>
                 </div>
             </div>

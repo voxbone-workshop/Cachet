@@ -60,6 +60,17 @@
     transition: all .5s;
 }
 
+.btn-outline2 {
+    margin: 5px;
+    border: 1px;
+    border-color: #e8edf0;
+    border-style: solid;
+    background-color: transparent;
+    background-image: none !important;
+    color: inherit;
+    transition: all .5s;
+}
+
 .btn-default.btn-outline {
     color: #999;
 }

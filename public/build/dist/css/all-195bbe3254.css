@@ -12792,6 +12792,17 @@ fieldset[disabled] .btn.btn-inverse.active {
   transition: all .5s;
 }
 
+.btn-outline2 {
+  margin: 5px;
+  border: 1px;
+  border-color: #e8edf0;
+  border-style: solid;
+  background-color: transparent;
+  background-image: none !important;
+  color: inherit;
+  transition: all .5s;
+}
+
 .btn-default.btn-outline {
   color: #999;
 }
@@ -15120,7 +15131,7 @@ body {
 }
 
 .sortable-chosen {
-  border: 1px solid #e8e8e8 !important;
+  border: 1px solid #edf0f3 !important;
   background-color: #f0f3f4;
 }
 
@@ -15650,7 +15661,7 @@ body.status-page .list-group .list-group-item p, body.status-page .list-group .l
 }
 
 body.status-page .list-group .list-group-item.group-name {
-  background-color: #e8e8e8;
+  background-color: #edf0f3;
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -15681,7 +15692,7 @@ body.status-page .list-group .list-group-item .status-text {
 }
 
 body.status-page .list-group.components {
-  border-color: #e8e8e8;
+  border-color: #edf0f3;
 }
 
 body.status-page .list-group.components:last-child {
@@ -15712,7 +15723,7 @@ body.status-page footer {
   width: 100%;
   bottom: 0;
   padding: 30px 0 60px 0;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #edf0f3;
   color: #666;
   font-size: 15px;
   line-height: 30px;
@@ -15736,7 +15747,7 @@ body.status-page footer .icons a.icon-link {
   border-radius: 3px;
   background-color: #666;
   text-align: center;
-  color: #e8e8e8;
+  color: #edf0f3;
   transition: all 0.15s;
   padding: 0 10px 0 10px;
 }
@@ -15817,6 +15828,16 @@ body.status-page footer .footer_to_top_rectangle {
 
 body.status-page .section-timeline, body.status-page .section-components, body.status-page .section-metrics, body.status-page .section-scheduled {
   margin-top: 40px;
+}
+
+body.status-page .section-components .list-group, body.status-page .section-metrics .graphic {
+  box-shadow: none;
+  border: 1px solid;
+  border-color: #e5ecf1;
+}
+
+body.status-page .section-metrics .graphic {
+  padding: 20px;
 }
 
 body.status-page .navbar-custom {

@@ -704,6 +704,16 @@ body.status-page {
         margin-top: 40px;
     }
 
+    .section-components .list-group, .section-metrics .graphic {
+        box-shadow: none;
+        border: 1px solid;
+        border-color: #e5ecf1;
+    }
+
+    .section-metrics .graphic {
+        padding: 20px;
+    }
+
     .navbar-custom {
         padding-top: 10px;
         padding-bottom: 10px;

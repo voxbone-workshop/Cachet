@@ -7,13 +7,13 @@
                 <strong>
                     {{ $metric->name }}
                     @if($metric->description)
-                    <i class="ion ion-ios-help-outline" data-toggle="tooltip" data-title="{{ $metric->description }}"></i>
+                    <img class="some-left-margin" data-toggle="tooltip" data-title="{{ $metric->description }}" data-container="body" data-placement="right" class="log-out-btn" src="/img/question-mark.png" srcset="/img/question-mark@2x.png 2x,/img/question-mark@3x.png 3x">
                     @endif
                 </strong>
             </div>
             <div class="col-xs-2">
                 <div class="dropdown pull-right">
-                    <a href="javascript: void(0);" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class='filter'>{{ trans('cachet.metrics.filter.'.$metric->trans_string_name) }}</span> <span class="caret"></span></a>
+                    <a href="javascript: void(0);" class="btn btn-outline2 dropdown-toggle" data-toggle="dropdown"><span class='filter'>{{ trans('cachet.metrics.filter.'.$metric->trans_string_name) }}</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="#" data-filter-type="last_hour">{{ trans('cachet.metrics.filter.last_hour') }}</a></li>
                         <li><a href="#" data-filter-type="today">{{ trans('cachet.metrics.filter.hourly') }}</a></li>
@@ -23,9 +23,9 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row graphic">
             <div class="col-xs-12">
-                <canvas id="metric-{{ $metric->id }}" data-metric-name="{{ $metric->name }}" data-metric-suffix="{{ $metric->suffix }}" data-metric-id="{{ $metric->id }}" data-metric-group="{{ $metric->view_name }}" data-metric-precision="{{ $metric->places }}" height="160" width="600"></canvas>
+                <canvas id="metric-{{ $metric->id }}" data-metric-name="{{ $metric->name }}" data-metric-suffix="{{ $metric->suffix }}" data-metric-id="{{ $metric->id }}" data-metric-group="{{ $metric->view_name }}" data-metric-precision="{{ $metric->places }}" height="200" width="600"></canvas>
             </div>
         </div>
     </li>
@@ -36,6 +36,7 @@
     Chart.defaults.global.elements.point.hitRadius = 10;
     Chart.defaults.global.responsiveAnimationDuration = 1000;
     Chart.defaults.global.legend.display = false;
+    Chart.defaults.global.defaultFontFamily = "MarkOT";
 
     var charts = {};
 
@@ -76,13 +77,15 @@
                 chart.chart.destroy();
             }
 
+            var color = Chart.helpers.color;
+
             chart.chart = new Chart(chart.context, {
                 type: 'line',
                 data: {
                     labels: _.keys(data),
                     datasets: [{
                         data: _.values(data),
-                        backgroundColor: "{{ $theme_metrics }}",
+                        backgroundColor: color("{{ $theme_metrics }}").alpha(0.78).rgbString(),
                         borderColor: "{{ color_darken($theme_metrics, -0.1) }}",
                         pointBackgroundColor: "{{ color_darken($theme_metrics, -0.1) }}",
                         pointBorderColor: "{{ color_darken($theme_metrics, -0.1) }}",
