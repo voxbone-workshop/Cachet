@@ -277,12 +277,23 @@ $(function () {
     $this.next('.group-items').toggleClass('hide');
   });
 
-  $('.group-name-action').on('click', function () {
+  $('.group-name-subscribe-action').on('click', function () {
     var $this = $(this.parentNode);
 
     $this.find('.group-toggle').toggleClass('ion-minus').toggleClass('ion-plus');
 
     $this.next('.group-items').toggleClass('hide');
+  });
+
+  $('.group-name-subscribe input[type=checkbox]').on('click', function () {
+    let isChecked = this.checked;
+
+    var $this = $(this.parentNode);
+    let cks = $this.next().find('input[type=checkbox]');
+
+    for (var i = 0; i < cks.length; i++) {
+      cks[i].checked = isChecked;
+    }
   });
 
   // Setup wizard

@@ -67042,12 +67042,23 @@ $(function () {
     $this.next('.group-items').toggleClass('hide');
   });
 
-  $('.group-name-action').on('click', function () {
+  $('.group-name-subscribe-action').on('click', function () {
     var $this = $(this.parentNode);
 
     $this.find('.group-toggle').toggleClass('ion-minus').toggleClass('ion-plus');
 
     $this.next('.group-items').toggleClass('hide');
+  });
+
+  $('.group-name-subscribe input[type=checkbox]').on('click', function () {
+    let isChecked = this.checked;
+
+    var $this = $(this.parentNode);
+    let cks = $this.next().find('input[type=checkbox]');
+
+    for (var i = 0; i < cks.length; i++) {
+      cks[i].checked = isChecked;
+    }
   });
 
   // Setup wizard
@@ -67590,24 +67601,13 @@ function getTroubleLocations (callback) {
   });
 }
 
-google.charts.load('current', {
-  'packages': ['geochart'],
-  'mapsApiKey': 'AIzaSyBiY_D-mnUuW9fFNLu_D5f-J9MYqhxFv2Y'
-});
-
-google.charts.setOnLoadCallback(drawRegionsMap);
-google.charts.setOnLoadCallback(drawMarkersMap);
-
 function searchBox (inputElement, listElement) {
-  // Declare variables
-
-  var input, filter, ul, li, x, i;
+  let input, filter, ul, li, x, i;
   input = document.getElementById(inputElement);
   filter = input.value.toUpperCase();
   ul = document.getElementById(listElement);
   li = ul.getElementsByTagName('li');
 
-  // Loop through all list items, and hide those who don't match the search query
   for (i = 1; i < li.length; i++) {
     x = li[i].getElementsByTagName('input')[0];
     if (x.value.toUpperCase().indexOf(filter) > -1) {

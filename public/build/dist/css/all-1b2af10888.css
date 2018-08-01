@@ -15660,7 +15660,7 @@ body.status-page .list-group .list-group-item p, body.status-page .list-group .l
   line-height: 1.3em;
 }
 
-body.status-page .list-group .list-group-item.group-name, body.status-page .list-group .list-group-item.group-name-action {
+body.status-page .list-group .list-group-item.group-name, body.status-page .list-group .list-group-item.group-name-subscribe {
   background-color: #edf0f3;
   cursor: pointer;
   -webkit-touch-callout: none;
