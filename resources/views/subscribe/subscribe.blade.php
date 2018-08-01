@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         {{--<button type="submit" class="btn btn-success">{{ trans('cachet.subscriber.button') }}</button>--}}
-                        <button type="submit" class="btn btn-save-purple"><span style="font-size: 12px;font-weight: bold; color: #ffffff">SAVE</span></button>
+                        <!-- <button type="submit" class="btn btn-save-purple"><span style="font-size: 12px;font-weight: bold; color: #ffffff">SAVE</span></button> -->
                     </form>
                 </div>
 
