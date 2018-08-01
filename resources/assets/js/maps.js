@@ -119,6 +119,15 @@ function formatOutageCities (callback) {
 
 function drawRegionsMap () {
   formatOutageRegions(voxboneCountries, dataRegions => {
+    var colors;
+
+    // hack for using the whole color palette
+    let template = ['nowhere', {
+      v: 1,
+      f: '-'
+    }];
+    dataRegions.push(template);
+
     var mapData = google.visualization.arrayToDataTable(dataRegions);
 
     var options = {
@@ -140,11 +149,6 @@ function drawRegionsMap () {
 
 function drawMarkersMap () {
   formatOutageCities(dataCities => {
-    var aa = [
-      ['City', 'Status'],
-      ['New York, NY', { v: 1, f: 'Outage' }]
-    ];
-
     var data = google.visualization.arrayToDataTable(dataCities);
 
     var options = {
@@ -157,7 +161,6 @@ function drawMarkersMap () {
       displayMode: 'markers',
       legend: 'none',
       enableRegionInteractivity: false
-      // tooltip: { trigger: 'none' }
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('marker_map'));
