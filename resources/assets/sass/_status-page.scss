@@ -520,7 +520,7 @@ body.status-page {
                 line-height: 1.3em;
             }
 
-            &.group-name {
+            &.group-name, &.group-name-action {
                 background-color: $cachet_gray_light;
                 //padding: {
                 //    top: 0.6em;

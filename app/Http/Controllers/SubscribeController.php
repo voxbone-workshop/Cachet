@@ -18,6 +18,7 @@ use CachetHQ\Cachet\Bus\Commands\Subscriber\UnsubscribeSubscriptionCommand;
 use CachetHQ\Cachet\Bus\Commands\Subscriber\UpdateSubscriberSubscriptionCommand;
 use CachetHQ\Cachet\Bus\Commands\Subscriber\VerifySubscriberCommand;
 use CachetHQ\Cachet\Models\Component;
+use CachetHQ\Cachet\Models\ComponentGroup;
 use CachetHQ\Cachet\Models\Subscriber;
 use CachetHQ\Cachet\Models\Subscription;
 use GrahamCampbell\Binput\Facades\Binput;
@@ -44,7 +45,10 @@ class SubscribeController extends Controller
     public function showSubscribe()
     {
         return View::make('subscribe.subscribe')
-            ->withAboutApp(Markdown::convertToHtml(Config::get('setting.app_about')));
+            ->withAboutApp(Markdown::convertToHtml(Config::get('setting.app_about')))
+            ->withComponentGroups(ComponentGroup::orderBy('name')->get());
+            // ->withSubscriber($subscriber)
+            // ->withSubscriptions($subscriber->subscriptions->pluck('component_id')->all())
     }
 
     /**

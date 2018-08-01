@@ -1,9 +1,6 @@
 @extends('layout.master')
 
 @section('content')
-<div class="pull-right">
-    <p><a class="btn btn-success btn-outline" href="/"><i class="ion ion-home"></i></a></p>
-</div>
 
 <div class="clearfix"></div>
 
@@ -69,6 +66,29 @@
                         </div>
                         {{--<button type="submit" class="btn btn-success">{{ trans('cachet.subscriber.button') }}</button>--}}
                         <button type="submit" class="btn btn-save-purple"><span style="font-size: 12px;font-weight: bold; color: #ffffff">SAVE</span></button>
+                    </form>
+                </div>
+
+                <div class="panel-heading">
+                    <h2 class="text-center" style="margin-bottom: 40px">Select notification types</h2>
+                </div>
+
+                <div class="push-notifications-container">
+                    <form action="#" method="post">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <div class="panel">
+                            <div class="list-group">
+                                @if(!$component_groups->isEmpty() || !$ungrouped_components->isEmpty())
+                                <div class="section-components">
+                                    @include('partials.components_subscribe')
+                                </div>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <!-- <button type="submit" class="btn btn-success">Update Subscription</button> -->
+                            <button type="submit" class="btn btn-save-purple"><span style="font-size: 12px;font-weight: bold; color: #ffffff">SAVE</span></button>
+                        </div>
                     </form>
                 </div>
             </div>
