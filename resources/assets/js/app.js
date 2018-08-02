@@ -410,3 +410,15 @@ function askConfirmation (callback) {
     callback();
   });
 }
+
+function copyToClipboard (elem) {
+  var copyText = document.getElementById(elem);
+  copyText.select();
+  document.execCommand('copy');
+  swal({
+    type: 'info',
+    title: 'Copied!',
+    timer: 1000,
+    showConfirmButton: false
+  });
+}

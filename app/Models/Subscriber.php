@@ -28,6 +28,7 @@ class Subscriber extends Model implements HasPresenter
      */
     protected $casts = [
         'email'       => 'string',
+        'sms'         => 'string',
         'verify_code' => 'string',
         'verified_at' => 'date',
         'global'      => 'bool',
@@ -38,7 +39,7 @@ class Subscriber extends Model implements HasPresenter
      *
      * @var string[]
      */
-    protected $fillable = ['email'];
+    protected $fillable = ['email', 'sms'];
 
     /**
      * The validation rules.
@@ -47,6 +48,7 @@ class Subscriber extends Model implements HasPresenter
      */
     public $rules = [
         'email' => 'required|email',
+        'sms' => 'required|string',
     ];
 
     /**

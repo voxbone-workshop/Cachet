@@ -26,6 +26,13 @@ final class SubscribeSubscriberCommand
     public $email;
 
     /**
+     * The subscriber sms.
+     *
+     * @var string
+     */
+    public $sms;
+
+    /**
      * The subscriber auto verification.
      *
      * @var bool
@@ -46,20 +53,23 @@ final class SubscribeSubscriberCommand
      */
     public $rules = [
         'email' => 'required|email',
+        'sms' => 'required|string',
     ];
 
     /**
      * Create a new subscribe subscriber command instance.
      *
      * @param string     $email
+     * @param string     $sms
      * @param bool       $verified
      * @param array|null $subscriptions
      *
      * @return void
      */
-    public function __construct($email, $verified = false, $subscriptions = null)
+    public function __construct($email, $sms, $verified = false, $subscriptions = null)
     {
         $this->email = $email;
+        $this->sms = $sms;
         $this->verified = $verified;
         $this->subscriptions = $subscriptions;
     }

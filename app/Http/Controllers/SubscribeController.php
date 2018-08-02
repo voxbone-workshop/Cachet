@@ -59,12 +59,13 @@ class SubscribeController extends Controller
     public function postSubscribe()
     {
         $email = Binput::get('email');
+        $sms = Binput::get('sms');
         $subscriptions = Binput::get('subscriptions');
 
         try {
             $verified = false;
 
-            $subscription = dispatch(new SubscribeSubscriberCommand($email, $verified));
+            $subscription = dispatch(new SubscribeSubscriberCommand($email, $sms, $verified));
         } catch (ValidationException $e) {
             return Redirect::route('status-page')
                 ->withInput(Binput::all())

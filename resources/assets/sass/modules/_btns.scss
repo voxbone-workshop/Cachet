@@ -39,6 +39,9 @@
   &.btn-success {
     @include pretty-buttons($btn-success-color, $btn-success-bg);
   }
+  &.btn-purple {
+    @include pretty-buttons(white, #7a18ff);
+  }
   &.btn-info {
     @include pretty-buttons($btn-info-color, $btn-info-bg);
   }

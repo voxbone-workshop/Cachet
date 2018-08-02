@@ -67176,6 +67176,18 @@ function askConfirmation (callback) {
   });
 }
 
+function copyToClipboard (elem) {
+  var copyText = document.getElementById(elem);
+  copyText.select();
+  document.execCommand('copy');
+  swal({
+    type: 'info',
+    title: 'Copied!',
+    timer: 1000,
+    showConfirmButton: false
+  });
+}
+
 (function(){var a="\n//# sourceURL=",k="' of type ",n='<script type="text/javascript" src="',p="SCRIPT",r="array",t="complete",u="function",v="google.charts.load",w="hasOwnProperty",x="number",y="object",z="pre-45",A="propertyIsEnumerable",B="string",C="text/javascript",D="toLocaleString";function E(){return function(b){return b}}function F(){return function(){}}function G(b){return function(){return this[b]}}var I,J=J||{};J.scope={};
 J.Up=function(b,c,d){if(null==b)throw new TypeError("The 'this' value for String.prototype."+d+" must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype."+d+" must not be a regular expression");return b+""};J.Gh=!1;J.fm=!1;J.gm=!1;J.defineProperty=J.Gh||typeof Object.defineProperties==u?Object.defineProperty:function(b,c,d){b!=Array.prototype&&b!=Object.prototype&&(b[c]=d.value)};
 J.Ij=function(b){return"undefined"!=typeof window&&window===b?b:"undefined"!=typeof global&&null!=global?global:b};J.global=J.Ij(this);J.Sk=function(b){if(b){for(var c=J.global,d=["Promise"],e=0;e<d.length-1;e++){var f=d[e];f in c||(c[f]={});c=c[f]}d=d[d.length-1];e=c[d];b=b(e);b!=e&&null!=b&&J.defineProperty(c,d,{configurable:!0,writable:!0,value:b})}};

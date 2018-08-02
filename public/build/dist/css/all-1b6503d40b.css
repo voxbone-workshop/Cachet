@@ -12669,6 +12669,35 @@ fieldset[disabled] .btn.btn-success.active {
   border-color: #2eee65;
 }
 
+.btn.btn-purple {
+  color: white;
+  background-image: linear-gradient(to bottom, #8932ff 0%, #6c00fe 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8932FF', endColorstr='#FF6C00FE', GradientType=0);
+  border-color: #6100e4;
+  border-bottom-color: #4b00b1;
+  text-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn.btn-purple:hover, .btn.btn-purple:focus, .btn.btn-purple:active, .btn.btn-purple.active {
+  background-image: linear-gradient(to bottom, #7a18ff 0%, #6100e4 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF7A18FF', endColorstr='#FF6100E4', GradientType=0);
+  border-color: #4b00b1;
+  color: white;
+}
+
+.btn.btn-purple.disabled, .btn.btn-purple.disabled:hover, .btn.btn-purple.disabled:focus, .btn.btn-purple.disabled:active, .btn.btn-purple.disabled.active, .btn.btn-purple[disabled], .btn.btn-purple[disabled]:hover, .btn.btn-purple[disabled]:focus, .btn.btn-purple[disabled]:active, .btn.btn-purple[disabled].active,
+fieldset[disabled] .btn.btn-purple,
+fieldset[disabled] .btn.btn-purple:hover,
+fieldset[disabled] .btn.btn-purple:focus,
+fieldset[disabled] .btn.btn-purple:active,
+fieldset[disabled] .btn.btn-purple.active {
+  background-color: #7a18ff;
+  border-color: #6c00fe;
+}
+
 .btn.btn-info {
   color: #fff;
   background-image: linear-gradient(to bottom, #4aa3df 0%, #258cd1 100%);
@@ -15401,13 +15430,6 @@ body.status-page .subscribe-form-control {
   background-color: #ffffff;
   border: solid 1px #e8edf0;
   margin-top: 1%;
-}
-
-body.status-page .btn-save-purple {
-  width: 150px;
-  height: 50px;
-  background-color: #7a18ff;
-  color: #ffffff;
 }
 
 body.status-page .underline {
