@@ -67539,23 +67539,27 @@ function drawRegionsMap () {
     var colors;
 
     // hack for using the whole color palette
-    let template = ['nowhere', {
-      v: 1,
-      f: '-'
-    }];
-    dataRegions.push(template);
+    // let template = ['nowhere', {
+    //   v: 1,
+    //   f: '-'
+    // }];
+    // dataRegions.push(template);
 
     var mapData = google.visualization.arrayToDataTable(dataRegions);
 
     var options = {
       colorAxis: {
-        colors: ['red', 'orange', '#7a19ff']
+        colors: ['red', 'orange', '#7a19ff'],
+        values: [1, 100]
       },
-      backgroundColor: '#81d4fa',
-      datalessRegionColor: '#ccc',
+      backgroundColor: '#f8f9fa',
+      datalessRegionColor: '#eaeef1',
       defaultColor: '#7a19ff',
       legend: 'none',
-      displayMode: 'regions'
+      displayMode: 'regions',
+      keepAspectRatio: 'false',
+      region: 'world',
+      magnifyingGlass: { enable: true, zoomFactor: 5.0 }
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('region_map'));
