@@ -67480,8 +67480,8 @@ const voxboneCountries = [
   'World (iNum)'
 ];
 
-function formatOutageRegions (voxboneCountries, callback) {
-  getTroubleLocations((troubleLocations) => {
+function formatOutageRegions (incident, voxboneCountries, callback) {
+  getTroubleLocations(incident, troubleLocations => {
     let arr = [
       ['Country', 'Status']
     ];
@@ -67511,8 +67511,8 @@ function formatOutageRegions (voxboneCountries, callback) {
   });
 }
 
-function formatOutageCities (callback) {
-  getTroubleLocations((troubleLocations) => {
+function formatOutageCities (incident, callback) {
+  getTroubleLocations(incident, troubleLocations => {
     let arr = [
       ['City', 'Status']
     ];
@@ -67534,17 +67534,8 @@ function formatOutageCities (callback) {
   });
 }
 
-function drawRegionsMap () {
-  formatOutageRegions(voxboneCountries, dataRegions => {
-    var colors;
-
-    // hack for using the whole color palette
-    // let template = ['nowhere', {
-    //   v: 1,
-    //   f: '-'
-    // }];
-    // dataRegions.push(template);
-
+function drawRegionsMap (incident) {
+  formatOutageRegions(incident, voxboneCountries, dataRegions => {
     var mapData = google.visualization.arrayToDataTable(dataRegions);
 
     var options = {
@@ -67568,8 +67559,8 @@ function drawRegionsMap () {
   });
 }
 
-function drawMarkersMap () {
-  formatOutageCities(dataCities => {
+function drawMarkersMap (incident) {
+  formatOutageCities(incident, dataCities => {
     var data = google.visualization.arrayToDataTable(dataCities);
 
     var options = {
@@ -67589,14 +67580,29 @@ function drawMarkersMap () {
   });
 }
 
-function getTroubleLocations (callback) {
-  $.getJSON('/api/v1/incidents?status=1', function (data) {
+function getTroubleLocations (incident, callback) {
+  let url;
+
+  if (incident) {
+    url = `/api/v1/incidents/${incident}`;
+  } else {
+    url = '/api/v1/incidents?status=1';
+  }
+
+  $.getJSON(url, data => {
     let locations = [];
 
     let regexCountry = /(?:service notification:\s)(?:the)?([a-z ]+)\.?/i;
     let regexCity = /(?:service notification:\s)(?:the)?([a-z ]+)[\(](.+)[\)]\.?/i;
 
-    data.data.forEach(x => {
+    let result;
+    if (data.data.constructor === Array) {
+      result = data.data;
+    } else {
+      result = [data.data];
+    }
+
+    result.forEach(x => {
       let parsedLocationWithCity = x.name.match(regexCity);
       let parsedLocationWithoutCity = x.name.match(regexCountry);
 
