@@ -78,7 +78,6 @@
 <body class="status-page @yield('bodyClass')">
 
     @if(app('env') == 'production')
-        <h1>if</h1>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S8P22K"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
