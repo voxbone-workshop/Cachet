@@ -123,7 +123,7 @@ function drawRegionsMap (incident) {
 
     var options = {
       colorAxis: {
-        colors: ['red', 'orange', '#7a19ff'],
+        colors: ['orange', 'orange', '#7a19ff'],
         values: [1, 100]
       },
       backgroundColor: '#f8f9fa',
