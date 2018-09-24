@@ -16,7 +16,8 @@
         </a>
         <div class="subscribe-btn-container">
             <img src="/img/green-button-sign-up.svg" class="diagonal-green">
-            <span class="navigation_subscribe"><a href="{{ route('subscribe.subscribe') }}" class="nav_btn"><strong>Subscribe</strong></a></span>
+            <span class="navigation_subscribe"><a href="{{ route('feed.rss') }}" class="nav_btn"><strong>{{ trans('cachet.subscriber.button') }}</strong></a></span>
+            <!-- <span class="navigation_subscribe"><a href="{{ route('subscribe.subscribe') }}" class="nav_btn"><strong>{{ trans('cachet.subscriber.button') }}</strong></a></span> -->
         </div>
         @if($current_user)
             <a class="btn btn-log-out" href="/auth/logout"><img class="log-out-btn" src="/img/logout-button.svg"></a>
