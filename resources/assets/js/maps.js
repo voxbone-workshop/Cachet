@@ -133,7 +133,10 @@ function drawRegionsMap (incident) {
       displayMode: 'regions',
       keepAspectRatio: 'false',
       region: 'world',
-      magnifyingGlass: { enable: true, zoomFactor: 5.0 }
+      magnifyingGlass: {
+        enable: true,
+        zoomFactor: 5.0
+      }
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('region_map'));
