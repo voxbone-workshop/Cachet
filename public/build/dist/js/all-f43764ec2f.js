@@ -67540,7 +67540,7 @@ function drawRegionsMap (incident) {
 
     var options = {
       colorAxis: {
-        colors: ['red', 'orange', '#7a19ff'],
+        colors: ['orange', 'orange', '#7a19ff'],
         values: [1, 100]
       },
       backgroundColor: '#f8f9fa',
@@ -67550,7 +67550,10 @@ function drawRegionsMap (incident) {
       displayMode: 'regions',
       keepAspectRatio: 'false',
       region: 'world',
-      magnifyingGlass: { enable: true, zoomFactor: 5.0 }
+      magnifyingGlass: {
+        enable: true,
+        zoomFactor: 5.0
+      }
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('region_map'));
