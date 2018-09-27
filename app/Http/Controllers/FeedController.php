@@ -86,6 +86,20 @@ class FeedController extends Controller
             });
         } else {
             Incident::visible()->orderBy('created_at', 'desc')->get()->map(function ($incident) use ($isRss) {
+
+                if ($incident->status == 4) {
+                    // Fixed!
+                    $resolvedIncident = clone $incident;
+
+                    // When updating an incident it takes the pub date, needs to be checked
+                    // $resolvedIncident->created_at = $resolvedIncident->updated_at;
+
+                    $resolvedIncident->name = "[RESOLVED] ". $resolvedIncident->name;
+                    $resolvedIncident->message = "[RESOLVED] ". $resolvedIncident->message;
+
+                    $this->feedAddItem($resolvedIncident, $isRss);
+                }
+
                 $this->feedAddItem($incident, $isRss);
             });
         }
