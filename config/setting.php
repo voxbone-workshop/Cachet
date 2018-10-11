@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'dashboard_login_link' => true,
+    'dashboard_login_link' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'enable_subscribers' => true,
+    'enable_subscribers' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -54,6 +54,5 @@ return [
     |
     */
 
-    'show_support' => true,
-
+    'show_support' => false,
 ];
