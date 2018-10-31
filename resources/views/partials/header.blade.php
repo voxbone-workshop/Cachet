@@ -14,6 +14,9 @@
         <a href="https://support.voxbone.com/hc/en-us/requests/new" class="navbar-btn-default">
             Contact Support
         </a>
+        <a href="https://voxbone.com/portal" class="navbar-btn-default">
+            Customer Portal
+        </a>
         <div class="subscribe-btn-container">
             <img src="/img/green-button-sign-up.svg" class="diagonal-green">
             <span class="navigation_subscribe"><a href="{{ route('feed.rss') }}" class="nav_btn"><strong>{{ trans('cachet.subscriber.button') }}</strong></a></span>
