@@ -9,7 +9,7 @@
             </a>
         </div>
         <div class="row">
-            <div class="col-sm-10 footer_first_line">
+            <div class="col-sm-12 footer_first_line">
                 <ul class="list-inline">
                     @if($current_user || Config::get('setting.dashboard_login_link'))
                         <li>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="row" >
-            <div class="col-sm-10 footer_subtext">
+            <div class="col-sm-12 footer_subtext">
                 <ul class="footer_legals">
                     <li><a href="/acceptable-use-policy" class="btn btn-link">
                             Acceptable Use Policy
