@@ -11,12 +11,10 @@
         <div class="row">
             <div class="col-sm-12 footer_first_line">
                 <ul class="list-inline">
-                    @if($current_user || Config::get('setting.dashboard_login_link'))
+                    @if($current_user)
                         <li>
                             <a class="btn btn-link" href="/dashboard">{{ trans('dashboard.dashboard') }}</a>
                         </li>
-                    @endif
-                    @if($current_user)
                         <li>
                             <a class="btn btn-link" href="/auth/logout">{{ trans('dashboard.logout') }}</a>
                         </li>
