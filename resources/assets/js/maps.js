@@ -54,6 +54,7 @@ const voxboneCountries = [
   'Spain',
   'Sweden',
   'Switzerland',
+  'Thailand',
   'Turkey',
   'United Arab Emirates',
   'United Kingdom',
